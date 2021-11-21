@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
 
-
-
 export default function Textfoam() {
     const [text,settext] = useState('enter text here');
     const convertupperhandler = ()=>{
@@ -17,11 +15,7 @@ export default function Textfoam() {
         let newtext = "";
         settext(newtext);
     }
-    const onchangedcopy = ()=>{
-        text.select();
-        
-        navigator.clipboard.writeText(text.value);
-    }
+   
     return (
         <div className="container-fluid">
             <h1 heading=""> Enter Text to Convert Lowercase to Upercase</h1>
@@ -31,7 +25,6 @@ export default function Textfoam() {
            <button className="btn btn-primary mx-3" onClick={convertupperhandler}>Convert to UpperCase</button>
             <button className="btn btn-primary mx-3" onClick={convertupperhandler}>Convert to LowerCase</button>
             <button className="btn btn-primary mx-3" onClick={onchangedclear}>clear text</button>
-            <button className="btn btn-primary mx-3" onClick={onchangedcopy}>copy Text</button>
            </div>
          </div>
                      <div className="conatiner my-3">
