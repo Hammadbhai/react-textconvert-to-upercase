@@ -7,6 +7,11 @@ export default function Textfoam() {
         let newtext = text.toUpperCase();
         settext(newtext)
     }
+    const convertlowerhandler = ()=>{
+        console.log("button is clicked");
+        let newtext = text.toLowerCase();
+        settext(newtext)
+    }
     const onchangedhandler = (event)=>{
         console.log("Dummy");
         settext(event.target.value);
@@ -23,7 +28,7 @@ export default function Textfoam() {
             <textarea className="form-control " rows="8" value={text} onChange={onchangedhandler}></textarea>
            <div className="conatainer mx-3">
            <button className="btn btn-primary mx-3" onClick={convertupperhandler}>Convert to UpperCase</button>
-            <button className="btn btn-primary mx-3" onClick={convertupperhandler}>Convert to LowerCase</button>
+            <button className="btn btn-primary mx-3" onClick={convertlowerhandler}>Convert to LowerCase</button>
             <button className="btn btn-primary mx-3" onClick={onchangedclear}>clear text</button>
            </div>
          </div>
