@@ -1,16 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState,props} from 'react'
+
+
 
 export default function Textfoam() {
+    
     const [text,settext] = useState('enter text here');
+    
+    
     const convertupperhandler = ()=>{
         console.log("button is clicked");
         let newtext = text.toUpperCase();
         settext(newtext)
+        
     }
     const convertlowerhandler = ()=>{
         console.log("button is clicked");
         let newtext = text.toLowerCase();
         settext(newtext)
+       
+        
     }
     const onchangedhandler = (event)=>{
         console.log("Dummy");
@@ -39,3 +47,4 @@ export default function Textfoam() {
         </div>
     )
 }
+

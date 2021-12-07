@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 
 export default function Navbar(props) {
@@ -15,24 +16,24 @@ export default function Navbar(props) {
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="/">{props.title}</a>
+        <a  className="navbar-brand" to="/">{props.title}</a>
       </div>
   
       {/* Collect the nav links, forms, and other content for toggling  */}
       <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul className="nav navbar-nav">
-          <li className="active"><a href="/">Link <span className="sr-only">(current)</span></a></li>
-          <li><a href="/">About Us</a></li>
+          <li className="active"><a to="/">a <span className="sr-only">(current)</span></a></li>
+          <li><a to="/about">About Us</a></li>
           <li className="dropdown">
-            <a href="/" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
+            <a to="/" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
             <ul className="dropdown-menu">
-              <li><a href="/">Action</a></li>
-              <li><a href="/">Another action</a></li>
-              <li><a href="/">Something else here</a></li>
+              <li><a to="/Textfoam">action</a></li>
+              <li><a to="/">Another action</a></li>
+              <li><a to="/">Something else here</a></li>
               <li role="separator" className="divider"></li>
-              <li><a href="/">Separated link</a></li>
+              <li><a to="/">Separated a</a></li>
               <li role="separator" className="divider"></li>
-              <li><a href="/">One more separated link</a></li>
+              <li><a to="/">One more separated a</a></li>
             </ul>
           </li>
         </ul>
